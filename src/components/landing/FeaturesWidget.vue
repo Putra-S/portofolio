@@ -4,6 +4,19 @@ function downloadCV() {
     window.open('/files/Putra-CV.pdf', '_blank');
 }
 
+function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
 // Data statis untuk visualisasi "Experience Card"
 const stats = [
     { label: 'Pengalaman Kerja', value: '5+ Tahun', icon: 'pi pi-calendar' },
@@ -91,14 +104,7 @@ const stats = [
                         class="p-button-rounded !px-6 !py-3 bg-primary border-primary hover:bg-primary-600 shadow-lg hover:shadow-primary/30 transition-all transform hover:-translate-y-1"
                         @click="downloadCV"
                     />
-                    <Button
-                        label="Hubungi Saya"
-                        icon="pi pi-arrow-right"
-                        iconPos="right"
-                        outlined
-                        class="p-button-rounded p-button-secondary !px-6 !py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
-                        @click="$emit('scrollTo', 'contact')"
-                    />
+                    <Button label="Hubungi Saya" icon="pi pi-arrow-right" iconPos="right" outlined class="p-button-rounded p-button-secondary !px-6 !py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all" @click="scrollToSection('contact')" />
                 </div>
             </div>
         </div>

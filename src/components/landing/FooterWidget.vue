@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear();
 // Data Sosial Media dipisah agar bisa dipakai ulang (DRY Principle)
 const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Putra-S', icon: 'pi pi-github', color: 'hover:text-gray-900 dark:hover:text-white' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/maruf-putra', icon: 'pi pi-linkedin', color: 'hover:text-blue-600' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ma-ruf-putra-s-901908328/', icon: 'pi pi-linkedin', color: 'hover:text-blue-600' },
     { name: 'WhatsApp', url: 'https://wa.me/6285232406085', icon: 'pi pi-whatsapp', color: 'hover:text-green-500' }
 ];
 
@@ -37,7 +37,7 @@ function scrollToTop() {
 </script>
 
 <template>
-    <footer class="bg-gray-50 dark:bg-surface-900 border-t border-surface-200 dark:border-surface-800 pt-20 pb-10 px-6 lg:px-20 mt-20 relative overflow-hidden">
+    <footer id="contact" class="bg-gray-50 dark:bg-surface-900 border-t border-surface-200 dark:border-surface-800 pt-20 pb-10 px-6 lg:px-20 mt-20 relative overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50"></div>
 
         <div class="container mx-auto">

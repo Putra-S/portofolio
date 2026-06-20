@@ -1,3 +1,18 @@
+<script setup>
+function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+</script>
+
 <template>
     <section id="hero" class="relative min-h-[90vh] flex items-center justify-center pt-24 pb-20 px-6 lg:px-20 overflow-hidden">
         <div class="absolute inset-0 -z-10 overflow-hidden bg-gray-50 dark:bg-gray-900">
@@ -31,16 +46,16 @@
                         label="Lihat Proyek"
                         icon="pi pi-arrow-down"
                         iconPos="right"
-                        @click="$emit('scrollTo', 'projects')"
+                        @click="scrollToSection('highlights')"
                         class="p-button-rounded !px-8 !py-3 !text-lg !font-bold shadow-lg hover:shadow-primary/50 transition-all transform hover:-translate-y-1"
                     />
-                    <Button label="Hubungi Saya" outlined class="p-button-rounded p-button-secondary !px-8 !py-3 !text-lg !font-bold hover:bg-gray-100 dark:hover:bg-gray-800 transition-all" @click="$emit('scrollTo', 'contact')" />
+                    <Button label="Hubungi Saya" outlined class="p-button-rounded p-button-secondary !px-8 !py-3 !text-lg !font-bold hover:bg-gray-100 dark:hover:bg-gray-800 transition-all" @click="scrollToSection('contact')" />
                 </div>
 
                 <div class="mt-8 flex gap-6 justify-center md:justify-start text-gray-500 animate-fade-up" style="animation-delay: 0.6s">
-                    <a href="#" class="hover:text-primary transition-colors"><i class="pi pi-github text-2xl"></i></a>
-                    <a href="#" class="hover:text-primary transition-colors"><i class="pi pi-linkedin text-2xl"></i></a>
-                    <a href="#" class="hover:text-primary transition-colors"><i class="pi pi-envelope text-2xl"></i></a>
+                    <a href="https://github.com/Putra-S" target="_blank" class="hover:text-primary transition-colors"><i class="pi pi-github text-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/ma-ruf-putra-s-901908328/" target="_blank" class="hover:text-primary transition-colors"><i class="pi pi-linkedin text-2xl"></i></a>
+                    <a href="mailto:marufp1605@gmail.com" class="hover:text-primary transition-colors"><i class="pi pi-envelope text-2xl"></i></a>
                 </div>
             </div>
 

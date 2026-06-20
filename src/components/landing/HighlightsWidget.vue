@@ -40,6 +40,33 @@ const getColorClasses = (color) => {
     };
     return map[color] || map.blue;
 };
+
+const otherProjects = ref([
+    {
+        title: 'WhatsApp Gateway API (Baileys)',
+        description: 'Microservice gateway WhatsApp multi-session berbasis Baileys library. Mendukung pengiriman pesan massal (broadcast), auto-reply dinamis berbasis database, integrasi webhook, dan antrean pesan pintar untuk pencegahan ban.',
+        icon: 'pi pi-whatsapp',
+        tech: ['Node.js', 'Baileys', 'Socket.io', 'MySQL']
+    },
+    {
+        title: 'Telegram Notification Gateway',
+        description: 'Sistem bot gateway Telegram untuk pengiriman notifikasi otomatis dari SIMRS, mencakup alert kegagalan sistem, notifikasi pendaftaran pasien baru, dan pelaporan berkala.',
+        icon: 'pi pi-send',
+        tech: ['Node.js', 'Telegram API', 'Express.js', 'Webhook']
+    },
+    {
+        title: 'Dashboard Jadwal Dokter Real-Time',
+        description: 'Aplikasi dashboard display jadwal dokter real-time untuk monitor ruang tunggu poli klinik rumah sakit, terhubung langsung secara real-time dengan database SIMRS.',
+        icon: 'pi pi-calendar-plus',
+        tech: ['Vue 3', 'REST API', 'PrimeVue', 'Flexbox']
+    },
+    {
+        title: 'Sistem Manajemen Anggaran (Budgeting)',
+        description: 'Aplikasi backend untuk pengelolaan pengajuan anggaran operasional unit kerja, perencanaan biaya tak terduga, dan tracking persetujuan anggaran internal rumah sakit.',
+        icon: 'pi pi-percentage',
+        tech: ['Node.js', 'Express.js', 'MySQL', 'JWT Auth']
+    }
+]);
 </script>
 
 <template>
@@ -99,6 +126,44 @@ const getColorClasses = (color) => {
                     <div class="flex gap-4 justify-center lg:justify-start">
                         <Button label="Detail Project" icon="pi pi-arrow-right" iconPos="right" />
                         <Button label="Source Code" icon="pi pi-github" severity="secondary" outlined />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Proyek Lainnya -->
+        <div class="mt-32">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Proyek Tambahan Lainnya</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Beberapa modul pendukung, microservice, dan pustaka integrasi yang telah saya kembangkan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                    v-for="(project, index) in otherProjects"
+                    :key="index"
+                    class="bg-white dark:bg-surface-900 p-8 rounded-2xl shadow-sm hover:shadow-md border border-gray-100 dark:border-surface-800 transition-all transform hover:-translate-y-1 flex flex-col justify-between"
+                    data-aos="fade-up"
+                    :data-aos-delay="index * 100"
+                >
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-xl">
+                                <i :class="project.icon"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white">{{ project.title }}</h4>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">{{ project.description }}</p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span v-for="(tech, i) in project.tech" :key="i" class="px-2.5 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xs font-semibold rounded">
+                                {{ tech }}
+                            </span>
+                        </div>
+                        <div class="flex gap-4">
+                            <Button label="Source Code" icon="pi pi-github" severity="secondary" outlined size="small" />
+                        </div>
                     </div>
                 </div>
             </div>
