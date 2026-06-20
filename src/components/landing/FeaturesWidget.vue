@@ -73,13 +73,15 @@ const stats = [
                 </h2>
 
                 <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                    Saya adalah seorang Fullstack Developer dengan fokus utama pada pengembangan <span class="font-semibold text-gray-900 dark:text-white">Infrastruktur IT Layanan Kesehatan</span>. Saya memiliki spesialisasi dalam menyederhanakan
-                    aliran data medis yang rumit menjadi antarmuka yang ramah pengguna.
+                    Saya adalah seorang Fullstack System Engineer dengan pengalaman lebih dari 6 tahun di industri IT Rumah Sakit. Spesialisasi saya meliputi pengelolaan infrastruktur IT kesehatan, kustomisasi dan pengembangan sistem inti
+                    <span class="font-semibold text-gray-900 dark:text-white">SIMRS Khanza</span>, serta rekayasa integrasi untuk melakukan bridging data dengan platform nasional seperti BPJS Kesehatan (VClaim, Antrean Online JKN), SATUSEHAT HL7 FHIR
+                    Kemenkes, dan E-Klaim.
                 </p>
 
                 <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                    Keahlian utama saya mencakup pembangunan platform <strong>SIMRS</strong> (Sistem Informasi Manajemen Rumah Sakit) yang tangguh, integrasi sistem bridging
-                    <span class="text-primary font-medium">BPJS Kesehatan & SATUSEHAT HL7 FHIR</span> Kemenkes, serta pengamanan transaksi data medis menggunakan teknologi modern.
+                    Sebagai pengembang full-stack, saya terbiasa membangun aplikasi web modern yang berkinerja tinggi menggunakan <span class="text-primary font-medium">Vue.js</span> untuk antarmuka pengguna, serta
+                    <span class="text-primary font-medium">Express.js / Bun</span> pada sisi backend API. Saya juga menangani siklus DevOps secara mandiri meliputi manajemen VPS, konfigurasi panel server produksi menggunakan aaPanel, serta otomasi
+                    deploy menggunakan PM2 untuk jaminan layanan 24/7.
                 </p>
 
                 <div class="mb-8">
